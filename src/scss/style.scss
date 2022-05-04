@@ -51,6 +51,7 @@ header{
         display: flex;
         justify-content: space-between;
         align-items: center;
+        flex-wrap: wrap;
         padding: 5px 0;
     }
 
@@ -63,6 +64,10 @@ header{
             font-weight: 700;
             width: 360px;
             font-size: 18px;
+        }
+
+        span{
+            font-weight: 500;
         }
     }
 
@@ -141,6 +146,7 @@ header{
         font-weight: 700;
         margin: 0;
         text-align: center;
+        text-transform: uppercase;
     }
 
     .btn__switch__wrapper{
@@ -173,14 +179,12 @@ header{
             display: flex;
             justify-content: space-between;
             opacity: 0;
-        }
-
-        .tab.active{
-            opacity: 1;
 
             .left-descr{
                 width: 33%;
-                position: relative;
+                position: absolute;
+                top: 50%;
+                left: 0;
 
                 p{
                     margin: 0;
@@ -196,7 +200,7 @@ header{
                 }
 
                 .thickness{
-                    top: 140px;
+                    top: -340px;
                     left: 30px;
                 }
 
@@ -218,18 +222,22 @@ header{
                 }
 
                 .painting{
-                    bottom: 200px;
+                    bottom: -300px;
                     left: 30px;
                 }
             }
 
             img{
                 width: 33%;
+                margin-left: auto;
+                margin-right: auto;
             }
 
             .right-descr{
                 width: 33%;
-                position: relative;
+                position: absolute;
+                top: 50%;
+                right: 0;
 
                 p{
                     margin: 0;
@@ -246,7 +254,7 @@ header{
                 }
 
                 .strapping{
-                    top: 150px;
+                    top: -350px;
                     right: 30px;
                     width: 220px;
                 }
@@ -274,9 +282,14 @@ header{
                 .material{
                     width: 230px;
                     right: 30px;
-                    bottom: 110px;
+                    bottom: -360px;
                 }
             }
+        }
+
+        .tab.active{
+            opacity: 1;
+            position: relative;
         }
     }
 
@@ -348,6 +361,7 @@ header{
         text-align: center;
         padding: 0 280px;
         margin: 0;
+        font-weight: 500;
     }
 
     .btn{
@@ -371,6 +385,7 @@ header{
     p{
         padding: 0 30px;
         font-size: 17px;
+        font-weight: 500;
     }
 }
 
@@ -390,6 +405,7 @@ header{
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
+        flex-wrap: wrap;
         margin-top: 50px;
 
         .block{
@@ -465,6 +481,7 @@ footer{
         display: flex;
         justify-content: space-between;
         align-items: center;
+        flex-wrap: wrap;
     }
 
     .left{
@@ -482,6 +499,10 @@ footer{
                 width: 360px;
                 font-size: 18px;
             }
+
+            span{
+                font-weight: 500;
+            }
         }
     }
 
@@ -492,11 +513,16 @@ footer{
         p{
             margin: 0;
             font-size: 14px;
+            font-weight: 500;
 
             a{
                 color: #418c61;
-                font-weight: 500;
+                font-weight: 600;
             }
+        }
+
+        .develop{
+            margin-top: 20px;
         }
     }
 }

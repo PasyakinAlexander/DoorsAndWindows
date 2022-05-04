@@ -4,6 +4,61 @@
     {
         max-width: 1024px;
     }
+
+    .top-block{
+        background-position: center;
+    }
+
+    .our-products{
+        .tab__viewer{
+            .tab.active{
+                .left-descr{
+                    .thickness{
+                        top: -260px;
+                        left: 0;
+                    }
+
+                    .spruce-or-pine{
+                        left: 0;
+                    }
+
+                    .painting{
+                        bottom: -200px;
+                        left: 0;
+                    }
+                }
+
+                .right-descr{
+                    .strapping, .humidity, .material{
+                        right: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .company{
+        img{
+            width: 50%;
+            height: auto;
+        }
+
+        p{
+            width: 50%;
+        }
+    }
+
+    .contacts{
+        .blocks{
+            .block{
+                width: 50%;
+            }
+
+            .phone, .mail{
+                margin-top: 30px;
+            }
+        }
+    }
 }
 
 @media(max-width: 1024px)
@@ -11,6 +66,10 @@
     .container
     {
         max-width: 992px;
+    }
+
+    header .descr p{
+        width: 300px;
     }
 }
 
@@ -20,6 +79,103 @@
     {
         max-width: 768px;
     }
+
+    header{
+        .descr, .phone{
+            width: 50%;
+        }
+
+        .descr{
+            p{
+                width: 100%;
+            }
+        }
+
+        .btn, .phone{
+            margin-top: 30px;
+        }
+    }
+
+    .our-products{
+        .tab__viewer{
+            .tab.active{
+                flex-direction: column;
+                flex-wrap: wrap;
+
+                img{
+                    width: auto;
+                    height: 500px;
+                }
+
+                .left-descr{
+                    position: initial;
+                    width: 100%;
+                    margin-top: 20px;
+
+                    p{
+                        position: initial;
+                    }
+
+                    .thickness::before, .spruce-or-pine::before, .painting::before{
+                        content: none;
+                    }
+
+                    .thickness, .spruce-or-pine, .painting{
+                        width: 100%;
+                    }
+                }
+
+                .right-descr{
+                    position: initial;
+                    width: 100%;
+                    margin-top: 20px;
+
+                    p{
+                        position: initial;
+                    }
+
+                    .strapping::before, .humidity::before, .material::before{
+                        content: none;
+                    }
+
+                    .strapping, .humidity, .material{
+                        width: 100%;
+                        text-align: left;
+                    }
+                }
+            }
+        }
+    }
+
+    .description{
+        p{
+            padding: 0 100px;
+        }
+    }
+
+    .contacts{
+        .blocks{
+            .block{
+                width: 45%;
+            }
+        }
+    }
+
+    footer{
+        .left, .right{
+            width: 100%;
+            justify-content: space-between;
+        }
+
+        .right{
+            flex-direction: row;
+            margin-top: 30px;
+
+            .develop{
+                margin: 0;
+            }
+        }
+    }
 }
 
 @media(max-width: 768px)
@@ -28,6 +184,74 @@
     {
         max-width: 576px;
     }
+
+    header{
+        .container{
+            justify-content: space-around;
+        }
+
+        .descr{
+            width: 100%;
+            align-items: center;
+
+            p{
+                text-align: center;
+            }
+        }
+    }
+
+    .our-products{
+        .btn__switch__wrapper{
+            flex-direction: column;
+            margin-top: 30px;
+
+            .btn__tab__switch{
+                margin-top: 10px;
+            }
+        }
+
+        .btns{
+            flex-direction: column;
+
+            p{
+                margin-top: 15px;
+                margin-left: 0;
+            }
+        }
+    }
+
+    .description{
+        p{
+            padding: 0;
+        }
+    }
+
+    .company{
+        .container{
+            flex-direction: column;
+        }
+
+        img, p{
+            width: 100%;
+        }
+
+        p{
+            padding: 0;
+        }
+    }
+
+    .contacts{
+        .blocks{
+            .block{
+                width: 100%;
+                margin-top: 30px;
+            }
+
+            .block:first-child{
+                margin-top: 0;
+            }
+        }
+    }
 }
 
 @media(max-width: 576px)
@@ -35,5 +259,96 @@
     .container
     {
         max-width: 100%;
+    }
+
+    header{
+        .phone{
+            width: fit-content;
+        }
+    }
+
+    .top-block{
+        h1{
+            font-size: 28px;
+
+            span{
+                font-size: 24px;
+            }
+        }
+    }
+
+    .our-products{
+        .tab__viewer{
+            .tab.active{
+                .left-descr{
+                    text-align: center;
+                }
+
+                .right-descr{
+                    .strapping, .humidity, .material{
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+
+    .cooperation{
+        .container{
+            flex-direction: column;
+        }
+
+        .descr{
+            width: 100%;
+
+            .btn{
+                width: 100%;
+                font-size: 16px;
+            }
+        }
+
+        img{
+            margin-top: 20px;
+            width: 100%;
+        }
+    }
+
+    .description{
+        .btn{
+            width: 100%;
+        }
+    }
+
+    .company{
+        p{
+            text-align: center;
+        }
+    }
+
+    .contacts{
+        h2{
+            margin-left: 0;
+            text-align: center;
+        }
+    }
+
+    footer{
+        .container{
+            flex-direction: column;
+        }
+
+        .left, .right{
+            flex-direction: column;
+        }
+
+        .left{
+            .descr{
+                margin-left: 0;
+
+                p{
+                    width: 100%;
+                }
+            }
+        }
     }
 }
