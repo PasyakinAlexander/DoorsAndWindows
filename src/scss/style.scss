@@ -3,6 +3,7 @@ body
     margin: 0;
     color: #000;
     background: #fff;
+    font-family: OpenSans;
 }
 
 body.lock
@@ -27,9 +28,477 @@ button, input, select
     outline: none;
 }
 
-button, a
+button, a, .btn
 {
     cursor: pointer;
+    font-family: OpenSans;
+}
+
+.btn{
+    color: white;
+    background-color: #00662b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 17px;
+}
+
+header{
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px 0;
+    }
+
+    .descr{
+        display: flex;
+        flex-direction: column;
+
+        p{
+            margin: 0;
+            font-weight: 700;
+            width: 360px;
+            font-size: 18px;
+        }
+    }
+
+    .btn{
+        width: 210px;
+        height: 40px;
+    }
+
+    .phone{
+        font-size: 21px;
+        font-weight: 700;
+        position: relative;
+        padding-left: 35px;
+    }
+
+    .phone::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: url(../images/icons/phone.png);
+        width: 28px;
+        height: 28px;
+    }
+}
+
+.top-block{
+    background-image: url(../images/backgrounds/top-block.jpg);
+    background-size: cover;
+    padding-top: 100px;
+    padding-bottom: 150px;
+
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    h1{
+        font-size: 46px;
+        font-weight: 400;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+
+        span{
+            font-size: 43px;
+            font-weight: 700;
+        }
+    }
+
+    h2{
+        font-size: 25px;
+        font-weight: 700;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+
+        span{
+            font-weight: 400;
+        }
+    }
+
+    .btn{
+        margin-top: 30px;
+        width: 245px;
+        height: 40px;
+    }
+}
+
+.our-products{
+    padding-top: 100px;
+    padding-bottom: 40px;
+
+    h2{
+        font-size: 31px;
+        font-weight: 700;
+        margin: 0;
+        text-align: center;
+    }
+
+    .btn__switch__wrapper{
+        margin-top: 70px;
+        display: flex;
+        justify-content: space-between;
+
+        .btn__tab__switch{
+            background: none;
+            font-size: 17px;
+            color: #c0c0c0;
+            border: none;
+            padding: 5px 20px;
+            transition: 0.5s;
+            border: 2px solid white;
+            border-radius: 25px;
+            font-weight: 700;
+        }
+
+        .btn__tab__switch.active{
+            color: black;
+            border: 2px solid #00662b;
+        }
+    }
+
+    .tab__viewer{
+        margin-top: 60px;
+
+        .tab{
+            display: flex;
+            justify-content: space-between;
+            opacity: 0;
+        }
+
+        .tab.active{
+            opacity: 1;
+
+            .left-descr{
+                width: 33%;
+                position: relative;
+
+                p{
+                    margin: 0;
+                    font-size: 18px;
+                    font-weight: 700;
+                    position: absolute;
+                }
+
+                .thickness::before{
+                    content: url(../images/products_figures/thickness.png);
+                    bottom: -10px;
+                    position: absolute;
+                }
+
+                .thickness{
+                    top: 140px;
+                    left: 30px;
+                }
+
+                .spruce-or-pine::before{
+                    content: url(../images/products_figures/spruce-or-pine.png);
+                    bottom: -10px;
+                    position: absolute;
+                }
+
+                .spruce-or-pine{
+                    top: 50%;
+                    left: 30px;
+                }
+
+                .painting::before{
+                    content: url(../images/products_figures/painting.png);
+                    top: 25px;
+                    position: absolute;
+                }
+
+                .painting{
+                    bottom: 200px;
+                    left: 30px;
+                }
+            }
+
+            img{
+                width: 33%;
+            }
+
+            .right-descr{
+                width: 33%;
+                position: relative;
+
+                p{
+                    margin: 0;
+                    font-size: 18px;
+                    font-weight: 700;
+                    position: absolute;
+                }
+
+                .strapping::before{
+                    content: url(../images/products_figures/strapping.png);
+                    bottom: -10px;
+                    position: absolute;
+                    right: 0;
+                }
+
+                .strapping{
+                    top: 150px;
+                    right: 30px;
+                    width: 220px;
+                }
+
+                .humidity::before{
+                    content: url(../images/products_figures/humidity.png);
+                    bottom: -10px;
+                    position: absolute;
+                    right: 0;
+                }
+
+                .humidity{
+                    top: 50%;
+                    width: 100%;
+                    text-align: right;
+                }
+
+                .material::before{
+                    content: url(../images/products_figures/material.png);
+                    bottom: -10px;
+                    position: absolute;
+                    right: 0;
+                }
+
+                .material{
+                    width: 230px;
+                    right: 30px;
+                    bottom: 110px;
+                }
+            }
+        }
+    }
+
+    .btns{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 60px;
+
+        .btn{
+            font-size: 22px;
+            width: 310px;
+            height: 50px;
+        }
+
+        p{
+            margin: 0;
+            font-size: 18px;
+            font-weight: 700;
+            margin-left: 20px;
+        }
+    }
+}
+
+.cooperation{
+    .container{
+        display: flex;
+    }
+
+    .descr{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h2{
+            margin: 0;
+            font-size: 31px;
+            font-weight: 700;
+        }
+
+        p{
+            margin: 0;
+            font-size: 18px;
+            font-weight: 400;
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
+
+        .btn{
+            margin-top: 20px;
+            width: 315px;
+            height: 40px;
+        }
+    }
+
+    img{
+        margin-left: auto;
+    }
+}
+
+.description{
+    padding-top: 35px;
+    padding-bottom: 35px;
+    background-color: #f4f4f4;
+
+    p{
+        font-size: 18px;
+        text-align: center;
+        padding: 0 280px;
+        margin: 0;
+    }
+
+    .btn{
+        margin-top: 20px;
+        width: 310px;
+        height: 50px;
+        font-size: 22px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.company{
+    padding: 100px 0;
+
+    .container{
+        display: flex;
+        align-items: center;
+    }
+
+    p{
+        padding: 0 30px;
+        font-size: 17px;
+    }
+}
+
+.contacts{
+    padding-top: 50px;
+    padding-bottom: 60px;
+    background-color: #ebebeb;
+
+    h2{
+        margin: 0;
+        font-size: 31px;
+        font-weight: 700;
+        margin-left: 40px;
+    }
+
+    .blocks{
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin-top: 50px;
+
+        .block{
+            h3{
+                font-size: 18px;
+                font-weight: 700;
+                margin: 0;
+            }
+
+            p{
+                font-size: 14px;
+                font-weight: 400;
+                margin: 0;
+            }
+        }
+
+        .storage, .production{
+            width: 320px;
+            position: relative;
+            padding-left: 31px;
+        }
+
+        .storage::before, .production::before{
+            content: '';
+            position: absolute;
+            top: calc(50% - 16px);
+            left: 0;
+            background-image: url(../images/icons/location.png);
+            width: 21px;
+            height: 33px;
+        }
+
+        .phone{
+            font-size: 19px;
+            font-weight: 700;
+            position: relative;
+            padding-left: 35px;
+        }
+
+        .phone::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-image: url(../images/icons/phone.png);
+            width: 28px;
+            height: 28px;
+        }
+
+        .mail{
+            font-size: 16px;
+            font-weight: 700;
+            position: relative;
+            padding-left: 35px;
+        }
+
+        .mail::before{
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 0;
+            background-image: url(../images/icons/mail.png);
+            width: 24px;
+            height: 18px;
+        }
+    }
+}
+
+footer{
+    padding: 10px 0;
+
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .left{
+        display: flex;
+        align-items: center;
+
+        .descr{
+            margin-left: 50px;
+            display: flex;
+            flex-direction: column;
+    
+            p{
+                margin: 0;
+                font-weight: 700;
+                width: 360px;
+                font-size: 18px;
+            }
+        }
+    }
+
+    .right{
+        display: flex;
+        flex-direction: column;
+
+        p{
+            margin: 0;
+            font-size: 14px;
+
+            a{
+                color: #418c61;
+                font-weight: 500;
+            }
+        }
+    }
 }
 
 
