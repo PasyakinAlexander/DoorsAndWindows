@@ -5,10 +5,6 @@
         max-width: 1024px;
     }
 
-    .top-block{
-        background-position: center;
-    }
-
     .our-products{
         .tab__viewer{
             .tab.active{
@@ -30,6 +26,44 @@
 
                 .right-descr{
                     .strapping, .humidity, .material{
+                        right: 0;
+                    }
+                }
+            }
+
+            .tab.bath-window, .window-construction{
+                img{
+                    width: 400px;
+                }
+
+                .left-descr{
+                    .connection{
+                        top: -200px;
+                        left: 0px;
+                    }
+
+                    .spruce-or-pine{
+                        left: -20px;
+                        top: -20px;
+                    }
+
+                    .polished{
+                        left: -30px;
+                        bottom: -130px;
+                    }
+
+                    .frame{
+                        left: 0px;
+                    }
+                }
+
+                .right-descr{
+                    .drying{
+                        top: -140px;
+                        right: 0;
+                    }
+
+                    .sash{
                         right: 0;
                     }
                 }
@@ -71,6 +105,22 @@
     header .descr p{
         width: 300px;
     }
+
+    .top-block{
+        background-position: center;
+    }
+
+    .our-products{
+        .tab__viewer{
+            .tab.active{
+                .left-descr{
+                    .thickness{
+                        top: -240px;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media(max-width: 992px)
@@ -81,6 +131,14 @@
     }
 
     header{
+        .container{
+            justify-content: space-around;
+        }
+
+        .logo{
+            margin-bottom: 10px;
+        }
+
         .descr, .phone{
             width: 50%;
         }
@@ -90,15 +148,20 @@
                 width: 100%;
             }
         }
-
-        .btn, .phone{
-            margin-top: 30px;
-        }
     }
 
     .our-products{
+        .btn__switch__wrapper{
+            flex-wrap: wrap;
+            justify-content: center;
+
+            .btn__tab__switch{
+                margin: 5px;
+            }
+        }
+
         .tab__viewer{
-            .tab.active{
+            .tab{
                 flex-direction: column;
                 flex-wrap: wrap;
 
@@ -114,13 +177,14 @@
 
                     p{
                         position: initial;
+                        margin-bottom: 10px;
                     }
 
-                    .thickness::before, .spruce-or-pine::before, .painting::before{
+                    .thickness::before, .spruce-or-pine::before, .painting::before, .connection::before, .polished::before, .frame::before{
                         content: none;
                     }
 
-                    .thickness, .spruce-or-pine, .painting{
+                    .thickness, .spruce-or-pine, .painting, .connection, .polished, .frame{
                         width: 100%;
                     }
                 }
@@ -128,19 +192,27 @@
                 .right-descr{
                     position: initial;
                     width: 100%;
-                    margin-top: 20px;
 
                     p{
                         position: initial;
+                        margin-bottom: 10px;
                     }
 
-                    .strapping::before, .humidity::before, .material::before{
+                    .strapping::before, .humidity::before, .material::before, .drying::before, .sash::before{
                         content: none;
                     }
 
-                    .strapping, .humidity, .material{
+                    .strapping, .humidity, .material, .drying, .sash{
                         width: 100%;
                         text-align: left;
+                    }
+                }
+            }
+
+            .window-construction{
+                .left-descr{
+                    .connection{
+                        width: 100%;
                     }
                 }
             }
@@ -164,12 +236,15 @@
     footer{
         .left, .right{
             width: 100%;
-            justify-content: space-between;
+            justify-content: space-around;
+
+            .logo{
+                margin-bottom: 10px;
+            }
         }
 
         .right{
             flex-direction: row;
-            margin-top: 30px;
 
             .develop{
                 margin: 0;
@@ -191,7 +266,6 @@
         }
 
         .descr{
-            width: 100%;
             align-items: center;
 
             p{
@@ -285,9 +359,16 @@
                 }
 
                 .right-descr{
-                    .strapping, .humidity, .material{
+                    .strapping, .humidity, .material, .drying, .sash{
                         text-align: center;
                     }
+                }
+            }
+
+            .tab.bath-window, .window-construction{
+                img{
+                    width: 100%;
+                    height: auto;
                 }
             }
         }

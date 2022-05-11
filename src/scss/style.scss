@@ -97,6 +97,7 @@ header{
 .top-block{
     background-image: url(../images/backgrounds/top-block.jpg);
     background-size: cover;
+    background-position: right;
     padding-top: 100px;
     padding-bottom: 150px;
 
@@ -291,6 +292,161 @@ header{
             opacity: 1;
             position: relative;
         }
+
+        .bath-door{
+            .left-descr{
+                .thickness{
+                    top: -320px;
+                }
+
+                .spruce-or-pine{
+                    top: -150px;
+                }
+
+                .polished{
+                    top: 50%;
+                }
+
+                .painting::before{
+                    top: 50px;
+                }
+            }
+
+            .right-descr{
+                .humidity{
+                    top: -150px;
+                }
+
+                .material{
+                    top: 50%;
+                }
+
+                .material::before{
+                    bottom: 200px;
+                }
+
+                .material.box::before{
+                    bottom: -10px;
+                }
+
+                .material.box{
+                    bottom: -360px;
+                    top: auto;
+                }
+            }
+        }
+    }
+
+    .tab.bath-window, .window-construction{
+        img{
+            width: 500px;
+        }
+
+        .left-descr{
+            .connection{
+                width: 260px;
+                left: 60px;
+                top: -230px;
+            }
+
+            .connection::before{
+                content: url(../images/products_figures/connection.png);
+                top: 50px;
+                position: absolute;
+                left: 0;
+            }
+
+            .spruce-or-pine{
+                top: -50px;
+            }
+
+            .polished{
+                width: 260px;
+                left: 30px;
+                bottom: -120px;
+            }
+
+            .polished::before{
+                content: url(../images/products_figures/frame.png);
+                bottom: -10px;
+                position: absolute;
+                left: 0;
+            }
+
+            .frame{
+                width: 280px;
+                left: 50px;
+                bottom: -200px;
+            }
+
+            .frame::before{
+                content: url(../images/products_figures/frame.png);
+                bottom: -10px;
+                position: absolute;
+                left: 0;
+            }
+        }
+
+        .right-descr{
+            .drying{
+                width: 280px;
+                right: 30px;
+                top: -170px;
+            }
+
+            .drying::before{
+                content: url(../images/products_figures/drying.png);
+                top: -30px;
+                position: absolute;
+                right: 70px;
+            }
+
+            .sash{
+                width: 280px;
+                right: 50px;
+                top: -80px;
+            }
+
+            .sash::before{
+                content: url(../images/products_figures/sash.png);
+                bottom: -10px;
+                position: absolute;
+                right: 0px;
+            }
+
+            .material{
+                bottom: -240px;
+                right: 80px;
+            }
+        }
+    }
+
+    .tab.window-construction{
+        .left-descr{
+            .spruce-or-pine{
+                top: -50px;
+            }
+        }
+
+        .right-descr{
+            .drying{
+                top: -150px;
+            }
+
+            .sash::before{
+                content: url(../images/products_figures/material.png);
+                right: 50px;
+            }
+
+            .sash{
+                top: 0;
+                right: -30px;
+            }
+
+            .material{
+                bottom: -250px;
+            }
+        }
     }
 
     .btns{
@@ -337,6 +493,7 @@ header{
             font-weight: 400;
             margin-top: 30px;
             margin-bottom: 10px;
+            line-height: 30px;
         }
 
         .btn{
@@ -361,7 +518,8 @@ header{
         text-align: center;
         padding: 0 280px;
         margin: 0;
-        font-weight: 500;
+        font-weight: 400;
+        line-height: 30px;
     }
 
     .btn{
@@ -385,7 +543,8 @@ header{
     p{
         padding: 0 30px;
         font-size: 17px;
-        font-weight: 500;
+        font-weight: 400;
+        line-height: 30px;
     }
 }
 
@@ -476,6 +635,7 @@ header{
 
 footer{
     padding: 10px 0;
+    background-color: #f4f4f4;
 
     .container{
         display: flex;
