@@ -1,3 +1,9 @@
+@media(max-width: 1440px){
+    .top-block{
+        background-position-x: -350px;
+    }
+}
+
 @media(max-width: 1200px)
 {
     .container
@@ -107,7 +113,7 @@
     }
 
     .top-block{
-        background-position: center;
+        background-position-x: -450px;
     }
 
     .our-products{
@@ -148,6 +154,10 @@
                 width: 100%;
             }
         }
+    }
+
+    .top-block{
+        background-position-x: -350px;
     }
 
     .our-products{
@@ -236,7 +246,7 @@
     footer{
         .left, .right{
             width: 100%;
-            justify-content: space-around;
+            justify-content: space-between;
 
             .logo{
                 margin-bottom: 10px;
@@ -274,16 +284,13 @@
         }
     }
 
+    .top-block{
+        background-position-x: -500px;
+        background-color: rgba(255, 255, 255, 0.5);
+        background-blend-mode: color;
+    }
+
     .our-products{
-        .btn__switch__wrapper{
-            flex-direction: column;
-            margin-top: 30px;
-
-            .btn__tab__switch{
-                margin-top: 10px;
-            }
-        }
-
         .btns{
             flex-direction: column;
 
@@ -291,6 +298,18 @@
                 margin-top: 15px;
                 margin-left: 0;
             }
+        }
+    }
+
+    .cooperation{
+        .descr{
+            padding-bottom: 30px;
+        }
+
+        img{
+            width: 45%;
+            height: fit-content;
+            margin-top: auto;
         }
     }
 
@@ -338,10 +357,17 @@
     header{
         .phone{
             width: fit-content;
+            margin-top: 20px;
+        }
+
+        .btn{
+            margin-top: 20px;
         }
     }
 
     .top-block{
+        background-position-x: center;
+
         h1{
             font-size: 28px;
 
@@ -352,6 +378,15 @@
     }
 
     .our-products{
+        .btn__switch__wrapper{
+            flex-direction: column;
+            margin-top: 30px;
+
+            .btn__tab__switch{
+                margin-top: 10px;
+            }
+        }
+
         .tab__viewer{
             .tab.active{
                 .left-descr{
@@ -371,6 +406,10 @@
                     height: auto;
                 }
             }
+        }
+
+        .btns{
+            margin-top: 10px;
         }
     }
 
@@ -401,6 +440,8 @@
     }
 
     .company{
+        padding: 30px 0;
+        
         p{
             text-align: center;
         }
